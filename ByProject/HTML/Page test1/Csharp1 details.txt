@@ -1,0 +1,64 @@
+Csharp1 details.
+
+Feature:
+  Local features
+    Rename folders and Video files for Animes.
+    Able to delecte files.
+    create a Database of Watched animes.
+    Choose if Anime is ongoing or Complete.
+    Create a Database of animes that are downloaded or not fully downloaded.
+    Video player or select alternitive videa player from system.
+    File manager.
+
+
+  Network features
+    Stream anime from several Anime websites.
+    Able to get meta data for Anime websites such as Animelist.
+    
+
+  Other features
+    Plugins
+    
+
+Details for features.
+Userinterface.
+
+Options.
+
+
+File manager.
+  Directory
+  Saved Directory locations
+  Saved playlists (Using folders/files).
+  Copy
+  Move
+  Rename (standard)
+  Rename (Anime version)
+    Name of Folder (Main and season folders)
+    Name of Episode
+    Langauge (Dub/Sub)
+    Season number
+    Episode number
+  Delete Episode, Season or Anime.
+  Size on Disk.
+    Anime, season or Episode.
+  Dupicate finder.
+
+
+Download manager
+  Able to download files from supported Anime website.
+  Save downloads with the appropriate Seasons and episodes.
+  Able to resume downloaded files.
+  Able to download mutiple files at once. Able to set the amount of downloable files at a time.
+  
+
+Video player
+  Able to play files locally and streaming.
+  Able to resume files.
+  Play, Stop, resume. Next (from folder
+  UI must show Episode and Season.\
+  UI must show Local and Streaming.
+
+Other
+  Anime notifications.
+  Shutdown, Sleep or hibernet countdown.

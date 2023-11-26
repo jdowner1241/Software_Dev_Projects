@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <title>This is a title</title>
+    <script>
+    var should_move = 0;
+    var move_pos = 0;
+    var direction = 'right';
+    var img_pos = 0;
+    var img_pos2 = 0;
+    var left_pos = 0;
+
+    function move() {
+      should_move = 1;
+    }
+
+      function mover() {
+       if(should_move == 1) {
+        if(direction == 'right') {
+        move_pos += 30;
+        var x = document.getElementById('div1');
+        x.style.position = 'absolute';
+        x.style.left = move_pos +'px'
+        x.style.top = 5 + 'px';
+         var screen_size = window.innerWidth;
+         img_pos = x.style.left;
+         img_pos = img_pos.substr(0, img_pos.length - 2);
+         if(img_pos >= screen_size - 120) {
+            direction = 'down';
+            move_pos = 30;
+         }
+        }
+
+       else if(direction == 'down') {
+        move_pos += 30;
+        var x = document.getElementById('div1');
+        x.style.top = move_pos +'px';
+         var screen_size = window.innerHeight;
+         img_pos = x.style.top;
+         img_pos = img_pos.substr(0, img_pos.length - 2);
+         if(img_pos >= 500) {
+           direction = 'left';
+           move_pos = window.innerWidth - 140;
+         }
+        }
+
+     else if(direction == 'left') {
+        move_pos -= 30;
+        var x = document.getElementById('div1');
+        x.style.left = move_pos +'px';
+         var screen_size = window.innerWidth;
+         img_pos = x.style.left;
+         img_pos = img_pos.substr(0, img_pos.length - 2);
+         if(img_pos <= 10) {
+           direction = 'top';
+            move_pos = 500;
+         }
+        }
+
+     else if(direction == 'top') {
+        move_pos -= 30;
+        var x = document.getElementById('div1');
+        x.style.top = move_pos +'px';
+         var screen_size = window.innerWidth;
+         img_pos = x.style.top;
+         img_pos = img_pos.substr(0, img_pos.length - 2);
+         if(img_pos <= 30) {
+           direction = 'right';
+         }
+        }
+
+
+
+       }
+        
+      }
+      setInterval(mover, 30);
+    </script>
+  </head>
+  <body style="color: #FFFF00; background-image: url(1.jpg); background-attachement=fixed">
+       <input type="Text" value="Welcome to My website." width="100" height="100" />
+
+       <div id='div1' class='divs1'>
+              <img src='image1.png' style='width: 300px; height: 300px; border: 1px solid #000000;'>
+       </div>
+       
+         <button id='button1' class='divs2' onclick="move()"> Click to move image</button>
+
+        <button onclick="should_move = 0;"> Stop</button>
+        <a href="page.html" style="color: #FFA500;">Please click here to go back to the main page.</a>
+        
+         
+            
+       
+         
+
+  </body>
+</html>
